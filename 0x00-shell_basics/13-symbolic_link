@@ -1,2 +1,2 @@
 #!/bin/bash
-bonjou
+ln -s /bin/ls __ls__
