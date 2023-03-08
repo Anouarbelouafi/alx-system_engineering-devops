@@ -1,2 +1,2 @@
 #!/bin/bash
-halla halla
+rm /tmp/my_first_directory/betty
