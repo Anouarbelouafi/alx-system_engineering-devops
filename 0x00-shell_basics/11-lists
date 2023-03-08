@@ -1,2 +1,2 @@
 #!/bin/bash
-chamionleague
+ls -a . .. /boot
