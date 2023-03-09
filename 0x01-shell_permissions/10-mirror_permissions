@@ -1,4 +1,3 @@
 #!/bin/bash
-
 mirror_mode=$(stat -c %a olleh)
 chmod $mirror_mode hello
