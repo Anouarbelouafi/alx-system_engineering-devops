@@ -1,2 +1,5 @@
 #!/bin/bash
-chmod 752 hello
+
+chmod 753 hello
+
+echo "The mode of hello has been set to -rwxr-x-wx."
