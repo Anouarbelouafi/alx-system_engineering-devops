@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "obase=bestc; $(($((36#$water))+$((36#$stir))))"
