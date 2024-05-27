@@ -6,8 +6,6 @@ and tasked with fixing the web stack to a working state. For each
 task, I wrote a script automating the commands necessary to fix the
 web stack.
 
-> ![debbuging](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/265/uWLzjc8.jpg)
-
 ## Tasks :page_with_curl:
 
 * **0. Give me a page!**
