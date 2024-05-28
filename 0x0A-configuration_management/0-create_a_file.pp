@@ -1,9 +1,10 @@
-#The code will create a file name school inside the /tmp Directory
+# Create a file in /tmp using Puppet
 
-file { '/tmp/school':
-    path    => '/tmp/school',
-    content => 'I love Puppet',
-    mode    => '0744',
-    owner   => 'www-data',
-    group   => 'www-data',
-    }
+file { 'holberton':
+  ensure  => present,
+  path    => '/tmp/holberton',
+  owner   => 'www-data',
+  group   => 'www-data',
+  mode    => '0744',
+  content => 'I love Puppet',
+}

@@ -1,14 +1,6 @@
-# Install Flask 2.1.0 and update Werkzeug
-package { 'python3':
-  ensure => installed,
-}
+# install puppet-lint using Puppet
 
-package { 'werkzeug':
+package { 'puppet-lint':
   ensure   => '2.1.1',
-  provider => 'pip3',
-}
-
-package { 'flask':
-  ensure   => '2.1.0',
-  provider => 'pip3',
+  provider => 'gem',
 }
