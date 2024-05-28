@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# displays To infinity and beyond indefinitely
-# With a sleep 2 in between each iteration
-# I am invincible!!! when receiving a SIGTERM signal
-
-while true
-do 
+# Displays To infinity and beyond indefinitely with a sleep 2 in between each iteration and I am invincible!!! when receiving a SIGTERM signal
+counter=1
+trap func SIGTERM
+function func() {
+	echo "I am invincible!!!"
+}
+while [ $counter -eq 1 ]; do
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'echo "I am invincible!!!"' SIGTERM
 done
