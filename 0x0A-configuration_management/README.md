@@ -4,6 +4,8 @@ In this project, I started working with Puppet as a configuration management
 tool. I practiced writing Puppet manifest files to create a file, install a
 package, and execute a command.
 
+![img-text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/292/4i8il3B.gif)
+
 ## Tasks :page_with_curl:
 
 * **0. Create a file**
