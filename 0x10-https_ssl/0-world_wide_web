@@ -1,27 +1,16 @@
 #!/usr/bin/env bash
-# Bash script that displays information about subdomains
+# displays information about subdomains
+display_dns_infor() {
 
-# Function to display info about a subdomain
-display_info() {
-    local domain=$1
-    local subdomain=$2
-
-    # Use dig command to get the IP address of the subdomain
-    ip=$(dig +short "${subdomain}"."${domain}")
-
-    # Display the information
-    echo "The subdomain ${subdomain} is a A record and points to ${ip}"
+	dig $2.$1 | awk 'c&&!--c;/;; ANSWER SECTION:/{c=1}' | awk -v subdomain=$2 '{print "The subdomain " subdomain " is a " $4 " record and points to " $5 }'
+	return 0
 }
+subdomains=("www" "lb-01" "web-01" "web-02")
 
-# Check if domain and subdomain are provided
-if [ $# -eq 2 ]; then
-    display_info "$1" "$2"
-else
-    # Default subdomains to check
-    subdomains=("www" "lb-01" "web-01" "web-02")
-
-    # Loop through each subdomain and display info
-    for subdomain in "${subdomains[@]}"; do
-        display_info "$1" "$subdomain"
-    done
-fi
+for subdomain in "${subdomains[@]}"
+do
+	if [ -z "$2" ] || [ "$2" == "$subdomain" ] ;
+	then
+		display_dns_infor "$1" "$subdomain"
+	fi
+done
